@@ -32,5 +32,5 @@ export class DomListener {
 
 // click => onClick
 function getMethodName(eventName) {
-  return 'on'+capitalize(eventName);
+  return 'on' + capitalize(eventName);
 }
