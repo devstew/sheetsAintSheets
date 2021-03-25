@@ -1,4 +1,4 @@
-import {$} from "@core/dom";
+import {$} from '@core/dom';
 
 export function resizeHandler($root, event) {
   const $resizer = $(event.target)
@@ -38,7 +38,7 @@ export function resizeHandler($root, event) {
     if (type === 'col') {
       $parent.css({width: value + 'px'})
       $root.findAll(`[data-col="${$parent.data.col}"]`)
-        .forEach(el => el.style.width = value + 'px')
+          .forEach(el => el.style.width = value + 'px')
     } else {
       $parent.css({
         height: value + 'px'
