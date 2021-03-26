@@ -1,8 +1,8 @@
-import {capitalize} from "@core/utils";
+import {capitalize} from '@core/utils';
 
 export class DomListener {
   constructor($root, listeners = []) {
-    if(!$root) {
+    if (!$root) {
       throw new Error('No $root provided for DomListener');
     }
     this.$root = $root
@@ -12,8 +12,9 @@ export class DomListener {
   initDomListeners() {
     this.listeners.forEach(listener => {
       const method = getMethodName(listener)
-      if(!this[method]){
+      if (!this[method]) {
         const name = this.name || ''
+        // eslint-disable-next-line max-len
         throw new Error(`Method ${method} is not implemented in ${name} Component`)
       }
       // same as addEventListener
